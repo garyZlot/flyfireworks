@@ -1,15 +1,15 @@
 //
 //  IntroLayer.m
-//  flyfireworks
+//  kuang
 //
-//  Created by garyliumac on 14-3-4.
+//  Created by garyliumac on 14-1-14.
 //  Copyright zlot 2014年. All rights reserved.
 //
 
 
 // Import the interfaces
 #import "IntroLayer.h"
-#import "HelloWorldLayer.h"
+#import "StartUpLayer.h"
 
 
 #pragma mark - IntroLayer
@@ -37,7 +37,7 @@
 -(id) init
 {
 	if( (self=[super init])) {
-
+        /*
 		// ask director for the window size
 		CGSize size = [[CCDirector sharedDirector] winSize];
 
@@ -53,6 +53,7 @@
 
 		// add the label as a child to this Layer
 		[self addChild: background];
+         */
 	}
 	
 	return self;
@@ -61,6 +62,6 @@
 -(void) onEnter
 {
 	[super onEnter];
-	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[HelloWorldLayer scene] ]];
+	[[CCDirector sharedDirector] replaceScene:[CCTransitionFade transitionWithDuration:1.0 scene:[StartUpLayer scene] ]];
 }
 @end

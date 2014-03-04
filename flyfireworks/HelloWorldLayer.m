@@ -1,8 +1,8 @@
 //
 //  HelloWorldLayer.m
-//  flyfireworks
+//  kuang
 //
-//  Created by garyliumac on 14-3-4.
+//  Created by garyliumac on 14-1-14.
 //  Copyright zlot 2014年. All rights reserved.
 //
 
@@ -40,7 +40,7 @@
 	// always call "super" init
 	// Apple recommends to re-assign "self" with the "super's" return value
 	if( (self=[super init]) ) {
-		
+		/*
 		// create and initialize a Label
 		CCLabelTTF *label = [CCLabelTTF labelWithString:@"Hello World" fontName:@"Marker Felt" fontSize:64];
 
@@ -101,6 +101,7 @@
 		
 		// Add the menu to the layer
 		[self addChild:menu];
+         */
 
 	}
 	return self;

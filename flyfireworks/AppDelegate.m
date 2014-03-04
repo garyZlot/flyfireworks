@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  flyfireworks
+//  kuang
 //
-//  Created by garyliumac on 14-3-4.
+//  Created by garyliumac on 14-1-14.
 //  Copyright zlot 2014年. All rights reserved.
 //
 
@@ -20,7 +20,7 @@
 	
 	// iPhone only
 	if( [[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone )
-		return UIInterfaceOrientationMaskLandscape;
+		return UIInterfaceOrientationMaskPortrait;
 	
 	// iPad only
 	return UIInterfaceOrientationMaskLandscape;
@@ -89,7 +89,7 @@
 	director_.wantsFullScreenLayout = YES;
 	
 	// Display FSP and SPF
-	[director_ setDisplayStats:YES];
+	[director_ setDisplayStats:NO];
 	
 	// set FPS at 60
 	[director_ setAnimationInterval:1.0/60];

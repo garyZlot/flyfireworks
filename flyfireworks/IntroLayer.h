@@ -1,8 +1,8 @@
 //
 //  IntroLayer.h
-//  flyfireworks
+//  kuang
 //
-//  Created by garyliumac on 14-3-4.
+//  Created by garyliumac on 14-1-14.
 //  Copyright zlot 2014年. All rights reserved.
 //
 
