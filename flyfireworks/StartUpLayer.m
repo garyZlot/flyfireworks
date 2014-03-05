@@ -12,6 +12,7 @@
 
 @implementation StartUpLayer
 
+@synthesize gameCenterManager;
 
 BOOL haveClicked = NO;
 
@@ -43,6 +44,20 @@ CCSprite *startBtn;
         [self addChild:startBtn];
         
     }
+    
+    /*
+    if([GameCenterManager isGameCenterAvailable]) {
+        self.gameCenterManager= [[[GameCenterManager alloc] init] autorelease];
+        [self.gameCenterManager setDelegate: self];
+		[self.gameCenterManager authenticateLocalUser];
+		
+		//[self updateCurrentScore];
+	} else {
+		NSLog(@"fail to init game center");
+	}
+     */
+    
+    
     return self;
 }
 

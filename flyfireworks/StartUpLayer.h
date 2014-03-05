@@ -8,9 +8,14 @@
 
 #import <Foundation/Foundation.h>
 #import "cocos2d.h"
+#import "GameCenterManager.h"
 
-@interface StartUpLayer : CCLayer <CCTouchAllAtOnceDelegate>
+@interface StartUpLayer : CCLayer <CCTouchAllAtOnceDelegate, GameCenterManagerDelegate>
+{
+    GameCenterManager *gameCenterManager;
+}
 
+@property(nonatomic, retain) GameCenterManager *gameCenterManager;
 +(CCScene *) scene;
 
 @end

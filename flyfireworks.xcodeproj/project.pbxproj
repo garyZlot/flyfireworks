@@ -194,10 +194,11 @@
 		CB0375DC18C5C79E0018586A /* MainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D418C5C79E0018586A /* MainLayer.m */; };
 		CB0375DD18C5C79E0018586A /* SettingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D618C5C79E0018586A /* SettingLayer.m */; };
 		CB0375DE18C5C79E0018586A /* StartUpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D818C5C79E0018586A /* StartUpLayer.m */; };
+		CB42F74818C6CC36007AFEEC /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB42F74718C6CC36007AFEEC /* GameCenterManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB03738018C5C5E00018586A /* flyfireworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flyfireworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB03738018C5C5E00018586A /* fly fireworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fly fireworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB03738318C5C5E00018586A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB03738518C5C5E00018586A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CB03738718C5C5E00018586A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -537,6 +538,8 @@
 		CB0375D618C5C79E0018586A /* SettingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SettingLayer.m; sourceTree = "<group>"; };
 		CB0375D718C5C79E0018586A /* StartUpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StartUpLayer.h; sourceTree = "<group>"; };
 		CB0375D818C5C79E0018586A /* StartUpLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpLayer.m; sourceTree = "<group>"; };
+		CB42F74618C6CC36007AFEEC /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
+		CB42F74718C6CC36007AFEEC /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -572,7 +575,7 @@
 		CB03738118C5C5E00018586A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB03738018C5C5E00018586A /* flyfireworks.app */,
+				CB03738018C5C5E00018586A /* fly fireworks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -597,6 +600,8 @@
 		CB03739718C5C5E00018586A /* flyfireworks */ = {
 			isa = PBXGroup;
 			children = (
+				CB42F74618C6CC36007AFEEC /* GameCenterManager.h */,
+				CB42F74718C6CC36007AFEEC /* GameCenterManager.m */,
 				CB0375CD18C5C79E0018586A /* Block.h */,
 				CB0375CE18C5C79E0018586A /* Block.m */,
 				CB0375CF18C5C79E0018586A /* GameCore.h */,
@@ -1091,7 +1096,7 @@
 			);
 			name = flyfireworks;
 			productName = flyfireworks;
-			productReference = CB03738018C5C5E00018586A /* flyfireworks.app */;
+			productReference = CB03738018C5C5E00018586A /* fly fireworks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1300,6 +1305,7 @@
 				CB03752D18C5C5E20018586A /* HelloWorldLayer.m in Sources */,
 				CB0374B218C5C5E10018586A /* CCWindow.m in Sources */,
 				CB0375D918C5C79E0018586A /* Block.m in Sources */,
+				CB42F74818C6CC36007AFEEC /* GameCenterManager.m in Sources */,
 				CB03749018C5C5E10018586A /* cocos2d.m in Sources */,
 				CB03743D18C5C5E10018586A /* CCProgressTimer.m in Sources */,
 				CB03741218C5C5E10018586A /* CCLabelTTF.m in Sources */,
@@ -1338,7 +1344,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1357,7 +1363,7 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 4.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1368,6 +1374,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -1380,7 +1387,8 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "fly fireworks";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -1390,6 +1398,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = flyfireworks/Prefix.pch;
@@ -1401,7 +1410,8 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "fly fireworks";
+				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;
 			};
