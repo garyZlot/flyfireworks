@@ -198,7 +198,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB03738018C5C5E00018586A /* fly fireworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "fly fireworks.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB03738018C5C5E00018586A /* flyfireworks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flyfireworks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB03738318C5C5E00018586A /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		CB03738518C5C5E00018586A /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CB03738718C5C5E00018586A /* OpenAL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenAL.framework; path = System/Library/Frameworks/OpenAL.framework; sourceTree = SDKROOT; };
@@ -575,7 +575,7 @@
 		CB03738118C5C5E00018586A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CB03738018C5C5E00018586A /* fly fireworks.app */,
+				CB03738018C5C5E00018586A /* flyfireworks.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -1096,7 +1096,7 @@
 			);
 			name = flyfireworks;
 			productName = flyfireworks;
-			productReference = CB03738018C5C5E00018586A /* fly fireworks.app */;
+			productReference = CB03738018C5C5E00018586A /* flyfireworks.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1387,7 +1387,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "fly fireworks";
+				PRODUCT_NAME = flyfireworks;
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
@@ -1410,7 +1410,7 @@
 					"-lsqlite3",
 					"-ObjC",
 				);
-				PRODUCT_NAME = "fly fireworks";
+				PRODUCT_NAME = flyfireworks;
 				PROVISIONING_PROFILE = "";
 				VALIDATE_PRODUCT = YES;
 				WRAPPER_EXTENSION = app;

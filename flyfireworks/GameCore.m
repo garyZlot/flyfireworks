@@ -20,7 +20,7 @@ NSMutableArray *fireworkEffects;
 
 Block *switchedBlock;
 BOOL canSwitch;
-int minCountForClear = 3;
+int minCountForClear = 2;
 int score = 0;
 int scorebase = 5;
 int targetbase = 2500;
@@ -125,6 +125,7 @@ BOOL keepSwitchCount = NO;
     canSwitchCountText = [CCLabelTTF labelWithString:[NSString stringWithFormat:@"%d",canSwitchCount] fontName:@"Marker Felt" fontSize:18];
     canSwitchCountText.position = ccp(screenSize.width - 58, screenSize.height - 100 - offsetY);
     canSwitchCountText.color = ccc3(255, 215, 0);
+    [canSwitchCountText setVisible:NO];
     [mainView addChild:canSwitchCountText];
     
     //next level menu
@@ -193,7 +194,7 @@ BOOL keepSwitchCount = NO;
     [nextLevelItem setIsEnabled:NO];
     [nextLevelItem stopAllActions];
     initScoreForNewLevel = score;
-    canSwitchCount = 20;
+    canSwitchCount = 2000;
     if (level<0) level = 0;
     level++;
     if (level == 1) {
@@ -321,20 +322,24 @@ BOOL keepSwitchCount = NO;
                     [self doRemoveSameColorBlocksAction];
                 
                 } else {
-                    canSwitch = NO;
-                    [self switchBlocksAtCol:m+1 atRow:n+1];
-                    if ([[self settingView] onsound]) {
-                        [[SimpleAudioEngine sharedEngine] playEffect:@"click.caf"];
-                    }
-                    
                     [self clearBlocksStatus];
                     [sameColorBlocksArr removeAllObjects];
-                    Block *newBlock = [blocks objectAtIndex:n];
-                    [self getConjointBlocksWithColor:newBlock.colorIndex atCol: m+1 atRow:n+1];
+                    //Block *newBlock = [blocks objectAtIndex:n];
+                    [self getConjointBlocksWithColor:switchedBlock.colorIndex atCol: m+1 atRow:n+1];
+                    [sameColorBlocksArr removeObjectAtIndex:0];
                     
-                    // wait for switch animation finished
-                    //NSLog(@"remainingTime is %d", remainingTime);
-                    [self performSelector:@selector(checkCanRemoveBlocks) withObject:self afterDelay:0.5];
+                    if ((sameColorBlocksArr.count + 1) >= minCountForClear) {
+                        canSwitch = NO;
+                        [sameColorBlocksArr addObject:switchedBlock];
+                        [self switchBlocksAtCol:m+1 atRow:n+1];
+                        if ([[self settingView] onsound]) {
+                            [[SimpleAudioEngine sharedEngine] playEffect:@"click.caf"];
+                        }
+                        
+                        // wait for switch animation finished
+                        //NSLog(@"remainingTime is %d", remainingTime);
+                        [self performSelector:@selector(checkCanRemoveBlocks) withObject:self afterDelay:0.5];
+                    }
                 }
                 
             }
@@ -355,6 +360,12 @@ BOOL keepSwitchCount = NO;
         [mainView reorderChild:currentBlock z:1];
         [switchedBlock runAction:[CCMoveTo actionWithDuration:.3 position:currentBlock.position]];
         [currentBlock runAction:[CCMoveTo actionWithDuration:.3 position:originalPosition]];
+        
+        [switchedBlock setIsCheckedForColor:YES];
+        [switchedBlock setIsCanRemoved:YES];
+        
+        [currentBlock setIsCheckedForColor:NO];
+        [currentBlock setIsCanRemoved:NO];
         
         [[allBlocksArr objectAtIndex:col-1] replaceObjectAtIndex:row-1 withObject:switchedBlock];
         switchedBlock = currentBlock;
@@ -631,43 +642,70 @@ BOOL keepSwitchCount = NO;
                     break;
             }
 
+            /*
             if ( canSwitchCount > 0 && (caCount>=minCountForClear || cbCount>=minCountForClear || ccCount>=minCountForClear
                                         || ceCount>=minCountForClear || cdCount>=minCountForClear || cfCount>=minCountForClear)) {
                 return YES;
             }
+            */
         }
         
     }
     
     int switchBlockColor = switchedBlock.colorIndex;
+    int willSwitchColorCount = 0;
     switch (switchBlockColor) {
         case 0:
             caCount++;
+            willSwitchColorCount = caCount;
             break;
         case 1:
             cbCount++;
+            willSwitchColorCount = cbCount;
             break;
         case 2:
             ccCount++;
+            willSwitchColorCount = ccCount;
             break;
         case 3:
             cdCount++;
+            willSwitchColorCount = cdCount;
             break;
         case 4:
             ceCount++;
+            willSwitchColorCount = ceCount;
             break;
         case 5:
             cfCount++;
+            willSwitchColorCount = cfCount;
         default:
             break;
     }
     
+    /*
     if ( canSwitchCount > 0 && (caCount>=minCountForClear || cbCount>=minCountForClear || ccCount>=minCountForClear
                                 || ceCount>=minCountForClear || cdCount>=minCountForClear || cfCount>=minCountForClear)) {
         return YES;
     }
+     */
+    
+    if (canSwitchCount > 0 && willSwitchColorCount>=minCountForClear && [self getAllBlockCount]>1) {
+        return YES;
+    }
     
     return NO;
+}
+
+- (int) getAllBlockCount
+{
+    int count = 0;
+    for (int i=0; i<allBlocksArr.count; i++) {
+        NSMutableArray * bs = [allBlocksArr objectAtIndex:i];
+        for (int j=0; j<bs.count; j++) {
+            count ++;
+        }
+    }
+    return count;
 }
 
 - (void) animateFirecracker
