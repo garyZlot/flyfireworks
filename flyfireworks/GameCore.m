@@ -46,12 +46,10 @@ CCLabelTTF *canSwitchCountText;
 CCSprite *firecracker;
 CCMenuItem *firecrackerItem;
 CCMenuItem *settingItem;
-CCMenuItem *nextLevelItem;
 
 CCLabelTTF *timeLabelText;
 CCSprite *timefrontSprite;
 CCSprite *timeprogressSprite;
-CCSprite *lightSpot;
 CCLabelTTF *scoreNote;
 CCLabelTTF *firecrackerCountText;
 
@@ -128,22 +126,6 @@ BOOL keepSwitchCount = NO;
     [canSwitchCountText setVisible:NO];
     [mainView addChild:canSwitchCountText];
     
-    //next level menu
-    CCSprite *nextLevel = [CCSprite spriteWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"next_level.png"]];
-    CCSprite *selectedNextLevel = [CCSprite spriteWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"next_level.png"]];
-    selectedNextLevel.scale = 1.2;
-    nextLevelItem = [CCMenuItemSprite itemWithNormalSprite:nextLevel selectedSprite:selectedNextLevel target:self selector:@selector(updateMainView)];
-    [nextLevelItem setIsEnabled:NO];
-    CCMenu* nextLevelMenu = [CCMenu menuWithItems: nextLevelItem,nil];
-    nextLevelMenu.touchEnabled = YES;
-    nextLevelMenu.position = ccp(20, screenSize.height - 50 - offsetY);
-    [mainView addChild:nextLevelMenu];
-    
-    //lightspot sprite
-    lightSpot = [CCSprite spriteWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"lightspot.png"]];
-    lightSpot.position = ccp(60, screenSize.height - 100 - offsetY);
-    [mainView addChild:lightSpot];
-    
     //firecracker menu
     firecracker = [CCSprite spriteWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"firecracker.png"]];
     CCSprite *selectedFirecracker = [CCSprite spriteWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"firecracker.png"]];
@@ -191,8 +173,6 @@ BOOL keepSwitchCount = NO;
 - (void) updateMainView
 {
     NSLog(@"--call stack---%@",[NSThread callStackSymbols]);
-    [nextLevelItem setIsEnabled:NO];
-    [nextLevelItem stopAllActions];
     initScoreForNewLevel = score;
     canSwitchCount = 2000;
     if (level<0) level = 0;
@@ -447,9 +427,7 @@ BOOL keepSwitchCount = NO;
         int playX = (arc4random() % 220) + 50;
         //NSLog(@"playX is -----%d", playX);
         CCSequence *seq2 = [CCSequence actions:[CCMoveTo actionWithDuration:.6 position:ccp(playX, scoreText.position.y)],
-                            [CCCallFuncND actionWithTarget:self selector:@selector(playFireWorkEffect:atLocationX:) data:playX],
-                            i==0 ? [CCCallFunc actionWithTarget:self selector:@selector(zoomLightSpot)] : nil,
-                            nil];
+                            [CCCallFuncND actionWithTarget:self selector:@selector(playFireWorkEffect:atLocationX:) data:playX],                            nil];
         //[b runAction:[CCMoveTo actionWithDuration:.6 position:scoreText.position]];
         [b runAction:seq];
         [b runAction:seq2];
@@ -469,53 +447,6 @@ BOOL keepSwitchCount = NO;
     [mainView addChild:s z:5];
 }
 
-- (void) zoomLightSpot
-{
-    float zoomInScale = lightSpot.scale * 2;
-    float zoomOutScale = lightSpot.scale * .5;
-    CCSequence *seq = [CCSequence actions:[CCScaleTo actionWithDuration:.4 scale:zoomInScale],
-                       [CCCallFunc actionWithTarget:self selector:@selector(handleZoomInLightSpot)],
-                       [CCScaleTo actionWithDuration:5 scale:zoomOutScale>1 ? zoomOutScale : 1], nil];
-    [lightSpot runAction:seq];
-}
-
-- (void) handleZoomInLightSpot
-{
-    //NSLog(@"zoom in scale---- %f", lightSpot.scale);
-    if (lightSpot.scale > 5) {
-        [lightSpot stopAllActions];
-        [lightSpot setVisible:NO];
-        CCParticleSystem *s = [CCParticleSystemQuad particleWithFile:@"bigfirework.plist"];
-        s.position = lightSpot.position;
-        [s setAutoRemoveOnFinish:YES];
-        [mainView addChild:s z:5];
-        
-        //update score
-        int getScore = scorebase*sameColorBlocksArr.count*(sameColorBlocksArr.count-1);
-        score = score + getScore;
-        [scoreNote setString:[NSString stringWithFormat:@"bomb to double current score: %d", getScore]];
-        
-        //wait firework finished
-        [self performSelector:@selector(resetLightSpot) withObject:self afterDelay:0.5];
-    }
-
-}
-
-- (void) handleZoomOutLightSpot
-{
-    //NSLog(@"zoom out scale---- %F", lightSpot.scale);
-    if (lightSpot.scale>1) {
-        ccTime t = 20 * (lightSpot.scale - 1);
-        [lightSpot runAction:[CCScaleTo actionWithDuration:t scale:1.0]];
-    }
-}
-
-- (void) resetLightSpot
-{
-    [lightSpot setScale:0];
-    [lightSpot setVisible:YES];
-    [lightSpot runAction:[CCScaleTo actionWithDuration:.5 scale:1]];
-}
 
 -(void) updateScore
 {
@@ -524,13 +455,6 @@ BOOL keepSwitchCount = NO;
     score = score + getScore;
     [scoreNote setString:[NSString stringWithFormat:@"%d fireworks: %d", sameColorBlocksArr.count, getScore]];
     [scoreText setString:[NSString stringWithFormat:@"%d",score]];
-    
-    if (score >= target) {//win for this level
-        [nextLevelItem setIsEnabled:YES];
-        CCSequence *seq = [CCSequence actions:[CCScaleTo actionWithDuration:.5 scale:1.2],
-                           [CCScaleTo actionWithDuration:.5 scale:1.0],nil];
-        [nextLevelItem runAction:[CCRepeatForever actionWithAction:seq]];
-    }
 }
 
 -(void) refreshAllBlocks
