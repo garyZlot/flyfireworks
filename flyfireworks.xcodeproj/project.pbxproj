@@ -23,7 +23,7 @@
 		CB0373A218C5C5E00018586A /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373A118C5C5E00018586A /* Icon-72.png */; };
 		CB0373A418C5C5E00018586A /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373A318C5C5E00018586A /* Icon-Small-50.png */; };
 		CB0373A618C5C5E00018586A /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373A518C5C5E00018586A /* Icon-Small.png */; };
-		CB0373A818C5C5E00018586A /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373A718C5C5E00018586A /* Icon-Small@2x.png */; };
+		CB0373A818C5C5E00018586A /* Icon~iphone.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373A718C5C5E00018586A /* Icon~iphone.png */; };
 		CB0373AA18C5C5E00018586A /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373A918C5C5E00018586A /* Icon.png */; };
 		CB0373AC18C5C5E00018586A /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CB0373AB18C5C5E00018586A /* Icon@2x.png */; };
 		CB0373AF18C5C5E00018586A /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = CB0373AE18C5C5E00018586A /* iTunesArtwork */; };
@@ -215,7 +215,7 @@
 		CB0373A118C5C5E00018586A /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
 		CB0373A318C5C5E00018586A /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
 		CB0373A518C5C5E00018586A /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
-		CB0373A718C5C5E00018586A /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
+		CB0373A718C5C5E00018586A /* Icon~iphone.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon~iphone.png"; path = "Resources/Icon~iphone.png"; sourceTree = "<group>"; };
 		CB0373A918C5C5E00018586A /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
 		CB0373AB18C5C5E00018586A /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		CB0373AD18C5C5E00018586A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
@@ -638,7 +638,7 @@
 				CB0373A118C5C5E00018586A /* Icon-72.png */,
 				CB0373A318C5C5E00018586A /* Icon-Small-50.png */,
 				CB0373A518C5C5E00018586A /* Icon-Small.png */,
-				CB0373A718C5C5E00018586A /* Icon-Small@2x.png */,
+				CB0373A718C5C5E00018586A /* Icon~iphone.png */,
 				CB0373A918C5C5E00018586A /* Icon.png */,
 				CB0373AB18C5C5E00018586A /* Icon@2x.png */,
 				CB0373AD18C5C5E00018586A /* Info.plist */,
@@ -1188,7 +1188,7 @@
 				CB03759118C5C72C0018586A /* fireworks_red@2x.png in Resources */,
 				CB03759918C5C72C0018586A /* next_level@2x.png in Resources */,
 				CB03759E18C5C72C0018586A /* setting@2x.png in Resources */,
-				CB0373A818C5C5E00018586A /* Icon-Small@2x.png in Resources */,
+				CB0373A818C5C5E00018586A /* Icon~iphone.png in Resources */,
 				CB0375CB18C5C72C0018586A /* click.caf in Resources */,
 				CB0375C418C5C72C0018586A /* start.png in Resources */,
 				CB03739E18C5C5E00018586A /* Default-568h@2x.png in Resources */,
