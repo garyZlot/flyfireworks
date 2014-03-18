@@ -175,10 +175,8 @@
 		CB0375C318C5C72C0018586A /* sound.png in Resources */ = {isa = PBXBuildFile; fileRef = CB03757818C5C72C0018586A /* sound.png */; };
 		CB0375C418C5C72C0018586A /* start.png in Resources */ = {isa = PBXBuildFile; fileRef = CB03757918C5C72C0018586A /* start.png */; };
 		CB0375C518C5C72C0018586A /* textbg.png in Resources */ = {isa = PBXBuildFile; fileRef = CB03757A18C5C72C0018586A /* textbg.png */; };
-		CB0375C918C5C72C0018586A /* bg.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CB03757F18C5C72C0018586A /* bg.mp3 */; };
 		CB0375CA18C5C72C0018586A /* bomb.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB03758018C5C72C0018586A /* bomb.caf */; };
 		CB0375CB18C5C72C0018586A /* click.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB03758118C5C72C0018586A /* click.caf */; };
-		CB0375CC18C5C72C0018586A /* coin.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB03758218C5C72C0018586A /* coin.caf */; };
 		CB0375D918C5C79E0018586A /* Block.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375CE18C5C79E0018586A /* Block.m */; };
 		CB0375DA18C5C79E0018586A /* GameCore.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D018C5C79E0018586A /* GameCore.m */; };
 		CB0375DB18C5C79E0018586A /* HelpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D218C5C79E0018586A /* HelpLayer.m */; };
@@ -186,6 +184,7 @@
 		CB0375DD18C5C79E0018586A /* SettingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D618C5C79E0018586A /* SettingLayer.m */; };
 		CB0375DE18C5C79E0018586A /* StartUpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = CB0375D818C5C79E0018586A /* StartUpLayer.m */; };
 		CB42F74818C6CC36007AFEEC /* GameCenterManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB42F74718C6CC36007AFEEC /* GameCenterManager.m */; };
+		CB57543B18D873CA000EF37E /* bg.caf in Resources */ = {isa = PBXBuildFile; fileRef = CB57543A18D873CA000EF37E /* bg.caf */; };
 		CBB89B4018D01EC000E78725 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB89B3718D01EC000E78725 /* Default-568h@2x.png */; };
 		CBB89B4118D01EC000E78725 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB89B3818D01EC000E78725 /* Default.png */; };
 		CBB89B4218D01EC000E78725 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CBB89B3918D01EC000E78725 /* Default@2x.png */; };
@@ -513,10 +512,8 @@
 		CB03757818C5C72C0018586A /* sound.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = sound.png; sourceTree = "<group>"; };
 		CB03757918C5C72C0018586A /* start.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = start.png; sourceTree = "<group>"; };
 		CB03757A18C5C72C0018586A /* textbg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = textbg.png; sourceTree = "<group>"; };
-		CB03757F18C5C72C0018586A /* bg.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = bg.mp3; sourceTree = "<group>"; };
 		CB03758018C5C72C0018586A /* bomb.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bomb.caf; sourceTree = "<group>"; };
 		CB03758118C5C72C0018586A /* click.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = click.caf; sourceTree = "<group>"; };
-		CB03758218C5C72C0018586A /* coin.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = coin.caf; sourceTree = "<group>"; };
 		CB0375CD18C5C79E0018586A /* Block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Block.h; sourceTree = "<group>"; };
 		CB0375CE18C5C79E0018586A /* Block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Block.m; sourceTree = "<group>"; };
 		CB0375CF18C5C79E0018586A /* GameCore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCore.h; sourceTree = "<group>"; };
@@ -531,6 +528,7 @@
 		CB0375D818C5C79E0018586A /* StartUpLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StartUpLayer.m; sourceTree = "<group>"; };
 		CB42F74618C6CC36007AFEEC /* GameCenterManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameCenterManager.h; sourceTree = "<group>"; };
 		CB42F74718C6CC36007AFEEC /* GameCenterManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameCenterManager.m; sourceTree = "<group>"; };
+		CB57543A18D873CA000EF37E /* bg.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = bg.caf; sourceTree = "<group>"; };
 		CBB89B3718D01EC000E78725 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Resources/Default-568h@2x.png"; sourceTree = "<group>"; };
 		CBB89B3818D01EC000E78725 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		CBB89B3918D01EC000E78725 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default@2x.png"; path = "Resources/Default@2x.png"; sourceTree = "<group>"; };
@@ -1071,10 +1069,9 @@
 		CB03757E18C5C72C0018586A /* Sound */ = {
 			isa = PBXGroup;
 			children = (
-				CB03757F18C5C72C0018586A /* bg.mp3 */,
+				CB57543A18D873CA000EF37E /* bg.caf */,
 				CB03758018C5C72C0018586A /* bomb.caf */,
 				CB03758118C5C72C0018586A /* click.caf */,
-				CB03758218C5C72C0018586A /* coin.caf */,
 			);
 			path = Sound;
 			sourceTree = "<group>";
@@ -1105,7 +1102,7 @@
 		CB03737818C5C5E00018586A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0510;
 				ORGANIZATIONNAME = zlot;
 				TargetAttributes = {
 					CB03737F18C5C5E00018586A = {
@@ -1160,10 +1157,10 @@
 				CB03759718C5C72C0018586A /* lightspot@2x.png in Resources */,
 				CB03759518C5C72C0018586A /* help@2x.png in Resources */,
 				CB0375A618C5C72C0018586A /* bj.png in Resources */,
+				CB57543B18D873CA000EF37E /* bg.caf in Resources */,
 				CB03759318C5C72C0018586A /* fireworks_yellow@2x.png in Resources */,
 				CB03759218C5C72C0018586A /* fireworks_violet@2x.png in Resources */,
 				CB03759B18C5C72C0018586A /* nosound@2x.png in Resources */,
-				CB0375CC18C5C72C0018586A /* coin.caf in Resources */,
 				CB0375B718C5C72C0018586A /* fireworks_yellow.png in Resources */,
 				CB0375B418C5C72C0018586A /* fireworks_pink.png in Resources */,
 				CB0375B318C5C72C0018586A /* fireworks_green.png in Resources */,
@@ -1171,7 +1168,6 @@
 				CB0375C218C5C72C0018586A /* setting.png in Resources */,
 				CB03759818C5C72C0018586A /* music@2x.png in Resources */,
 				CB0375B518C5C72C0018586A /* fireworks_red.png in Resources */,
-				CB0375C918C5C72C0018586A /* bg.mp3 in Resources */,
 				CB0375BA18C5C72C0018586A /* help_bg.png in Resources */,
 				CB0375B018C5C72C0018586A /* firecracker.png in Resources */,
 				CB03758E18C5C72C0018586A /* fireworks_blue@2x.png in Resources */,
@@ -1332,7 +1328,12 @@
 		CB03753118C5C5E20018586A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -1342,9 +1343,14 @@
 				);
 				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -1353,7 +1359,12 @@
 		CB03753218C5C5E20018586A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1361,7 +1372,11 @@
 					"NS_BLOCK_ASSERTIONS=1",
 				);
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
 				SDKROOT = iphoneos;

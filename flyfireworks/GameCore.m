@@ -84,7 +84,6 @@ BOOL keepSwitchCount = NO;
         minY = 40;
     }
     
-    
     //add game background
     CCSprite *bg = [CCSprite spriteWithTexture:[[CCTextureCache sharedTextureCache] addImage:@"gamebj.png"]];
     bg.position = ccp(screenSize.width/2, screenSize.height/2);
@@ -160,7 +159,7 @@ BOOL keepSwitchCount = NO;
     
     
     if ([[self settingView] onmusic]) {
-        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"bg.mp3"];
+        [[SimpleAudioEngine sharedEngine] playBackgroundMusic:@"bg.caf"];
     } else {
         [[SimpleAudioEngine sharedEngine] pauseBackgroundMusic];
     }

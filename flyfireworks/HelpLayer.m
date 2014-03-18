@@ -24,7 +24,7 @@
         helpbg.position = ccp(size.width/2, size.height/2);
         [self addChild:helpbg];
     
-        NSString *text = @"Click any block of grid to switch with the right top block, can fire fireworks if come to three same color conjoint blockes. More conjoints, more score. You can remove one firework use the firecracker on the right top.";
+        NSString *text = @"Click any block of grid to switch with the right top block, can fire fireworks if come to two same color conjoint blocks. More conjoints, more score. You can remove one firework use the firecracker on the right top.";
         
         CCLabelTTF *label = [CCLabelTTF labelWithString:text fontName:@"Arial" fontSize:14 dimensions:CGSizeMake(240,150) hAlignment:UITextAlignmentLeft];
         label.position = ccp(size.width/2, size.height/2);
